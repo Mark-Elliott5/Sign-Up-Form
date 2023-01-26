@@ -11,30 +11,51 @@
     <title>Sign Up</title>
 </head>
 <body>
+    
+    <div id="sidebar-image"><span>This is placeholder text</span></div>
 
-    <form action="" method="post">
-        <label for="first-name">First Name:</label>
-        <input id="first-name" name="first-name" type="text" required>
-        
-        <label for="last-name">Last Name:</label>
-        <input id="last-name" name="last-name" type="text" required>
-        
-        <label for="email">Email:</label>
-        <input id="email" name="user-email" type="text" required>
-        
-        <label for="phone-number">Phone Number:</label>
-        <input id="phone-number" name="phone-number" type="number" required>
-        
-        <label for="password">Password:</label>
-        <input id="password" name="password" type="password" required>
-        
-        <label for="password-confirm">Confirm Password:</label>
-        <input id="password-confirm" type="password" required>
+    <main>
+        <p>This is not a real online service! You know you need something like 
+            this in your life to help you realize your deepest dreams. Sign up 
+            now to get started.
+        </p>
 
-        <button type="submit">Create Account</button>
+        <form action="" method="post">
+            <div id="input-box">
+                <div>
+                    <label for="first-name">First Name:</label>
+                    <input id="first-name" name="first-name" type="text" required>
 
-        <span>Already have an account? <a href="" id="log-in">Log in</a></span>
-    </form>
+                    <label for="last-name">Last Name:</label>
+                    <input id="last-name" name="last-name" type="text" required>
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input id="email" name="user-email" type="text" required>
+
+                    <label for="phone-number">Phone Number:</label>
+                    <input id="phone-number" name="phone-number" type="number" required>
+                </div>
+
+                <div>
+                    <label for="password">Password:</label>
+                    <input id="password" name="password" type="password" required>
+
+                    <label for="password-confirm">Confirm Password:</label>
+                    <input id="password-confirm" type="password" required>
+                </div>
+            </div>
+
+        </form>
+
+        <div>
+            <button type="submit">Create Account</button>
+            <span>Already have an account? <a href="" id="log-in">Log in</a></span>
+        </div>
+
+    </main>
+
     <script src="signup.js"></script>
 </body>
 </html>
