@@ -17,44 +17,58 @@
     <main>
         <p>This is not a real online service! You know you need something like 
             this in your life to help you realize your deepest dreams. Sign up 
-            now to get started.
+            now to get started.<br><br>
+            You <em>know</em> you want to.
         </p>
 
         <form action="" method="post">
-            <h1>Let's do this!</h1>
-
             <div id="input-box">
-                <div>
-                    <label for="first-name">First Name:</label>
-                    <input id="first-name" name="first-name" type="text" required>
+                <h1>Let's do this!</h1>
 
-                    <label for="last-name">Last Name:</label>
-                    <input id="last-name" name="last-name" type="text" required>
+                <div class="input-wrapper">
+                    <div class="column-wrapper">
+                        <label for="first-name">First Name:</label>
+                        <input id="first-name" name="first-name" type="text" required>
+                    </div>
+                    
+                    <div class="column-wrapper">
+                        <label for="last-name">Last Name:</label>
+                        <input id="last-name" name="last-name" type="text" required>
+                    </div>
                 </div>
 
-                <div>
-                    <label for="email">Email:</label>
-                    <input id="email" name="user-email" type="text" required>
+                <div class="input-wrapper">
+                    <div class="column-wrapper">
+                        <label for="email">Email:</label>
+                        <input id="email" name="user-email" type="text" required>
+                    </div>
 
-                    <label for="phone-number">Phone Number:</label>
-                    <input id="phone-number" name="phone-number" type="number" required>
+                    <div class="column-wrapper">
+                        <label for="phone-number">Phone Number:</label>
+                        <input id="phone-number" name="phone-number" type="tel" minlength="10" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                    </div>
                 </div>
 
-                <div>
-                    <label for="password">Password:</label>
-                    <input id="password" name="password" type="password" required>
+                <div class="input-wrapper">
+                    <div class="column-wrapper">
+                        <label for="password">Password:</label>
+                        <input id="password" name="password" type="password" required>
+                    </div>
 
-                    <label for="password-confirm">Confirm Password:</label>
-                    <input id="password-confirm" type="password" required>
+                    <div class="column-wrapper">
+                        <label for="password-confirm">Confirm Password:</label>
+                        <input id="password-confirm" type="password" required>
+                    </div>    
                 </div>
             </div>
 
+            <div id="button-box">
+                <button type="submit">Create Account</button>
+                <span>Already have an account? <a href="" id="log-in">Log in</a></span>
+            </div>    
+
         </form>
 
-        <div>
-            <button type="submit">Create Account</button>
-            <span>Already have an account? <a href="" id="log-in">Log in</a></span>
-        </div>
 
     </main>
 

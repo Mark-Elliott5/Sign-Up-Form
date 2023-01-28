@@ -25,15 +25,41 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    box-shadow: 0px 0px 20px 5px #00000075;
 }
 
 #input-box {
     background-color: white;
+    padding: 3rem;
 }
+
+.input-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.column-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+/* #input-box {
+    display: grid;
+    grid-template-areas: 
+    "firstname lastname"
+    "email phonenumber"
+    "password passwordconfirm"
+    ;
+} */
 
 label {
     color: rgb(110, 110, 110);
     text-transform: uppercase;
+}
+
+input, label {
+    /* display: block; */
 }
 
 /* button,
