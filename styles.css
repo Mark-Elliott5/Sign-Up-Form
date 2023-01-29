@@ -53,14 +53,11 @@ h1 {
     gap: 1rem;
 }
 
-h1 {
+.input-header {
     grid-area: heading-box;
 }
 
 .input-wrapper {
-    display: block;
-    width: 100%;
-    gap: 5rem;
 }
 
 .column-wrapper {
@@ -72,6 +69,8 @@ input {
     border-radius: 2px;
     /* border-style: solid;  */
     border: 1px solid #00000030;
+    width: clamp(10ch, 65%, 60ch);
+    height: 1.5rem;
 }
 
 input:focus {
@@ -85,7 +84,7 @@ input:focus {
     justify-content: space-between; */
 }
 
-button {
+.submit-button {
     color: white;
     background-color: #2a5a76;
     border-radius: 5px;
@@ -108,7 +107,9 @@ button {
 label {
     color: rgb(110, 110, 110);
     text-transform: uppercase;
-    font-size: medium;
+    font-size: small;
+    letter-spacing: 0.1rem;
+    font-weight: bold;
 }
 
 #first-name-box {
