@@ -32,23 +32,33 @@ h1 {
     margin-top: 0;
 }
 
-.spiel-text, #button-box {
-    padding: 0rem 3rem 0rem 3rem;
+.spiel-text, #button-box, #input-box {
+    padding: 3rem;
 }
 
 .spiel-text {
-    font-size: larger;
+    font-size: x-large;
+    margin: 0;
 }
 
 #input-box {
     background-color: white;
-    padding: 3rem;
     box-shadow: 0 -5px 15px -10px #00000075, 0 5px 15px -10px #00000075;
+    display: grid;
+    grid-template-areas: 
+    "heading-box heading-box"
+    "first-name-box last-name-box"
+    "email-box phone-box"
+    "password-box confirm-password-box";
+    gap: 1rem;
+}
+
+h1 {
+    grid-area: heading-box;
 }
 
 .input-wrapper {
-    display: flex;
-    flex-direction: row;
+    display: block;
     width: 100%;
     gap: 5rem;
 }
@@ -58,11 +68,32 @@ h1 {
     flex-direction: column;
 }
 
-#button-box {
+input {
+    border-radius: 2px;
+    /* border-style: solid;  */
+    border: 1px solid #00000030;
 }
 
-.log-in-span {
-    display: block;
+input:focus {
+    box-shadow: 3px 3px 6px 0px #00000036;
+    outline: 1px solid blue;
+}
+
+#button-box {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+}
+
+button {
+    color: white;
+    background-color: #2a5a76;
+    border-radius: 5px;
+    padding: 0.75rem 3rem;
+    border: none;
+    font-size: medium;
+    margin-bottom: 1rem;
+    box-shadow: 3px 3px 6px 0px #00000036;
 }
 
 /* #input-box {
@@ -77,10 +108,35 @@ h1 {
 label {
     color: rgb(110, 110, 110);
     text-transform: uppercase;
+    font-size: medium;
+}
+
+#first-name-box {
+    grid-area: first-name-box;
+}
+
+#last-name-box {
+    grid-area: last-name-box;
+}
+
+#email-box {
+    grid-area: email-box;
+}
+
+#phone-box {
+    grid-area: phone-box;
+}
+
+#password-box {
+    grid-area: password-box;
+}
+
+#confirm-password-box {
+    grid-area: confirm-password-box;
 }
 
 input, label {
-    /* display: block; */
+    display: block;
 }
 
 /* button,
