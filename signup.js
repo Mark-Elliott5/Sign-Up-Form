@@ -5,7 +5,7 @@ const passwordBox = document.getElementById('password-box');
 const passwordRequirements = `<ul id="requirements"><li>5-16 characters</li><li>1 number</li><li>1 uppercase character</li><li>1 lowercase character</li></ul>`;
 const confirmPasswordInput = document.getElementById('password-confirm');
 const confirmPasswordBox = document.getElementById('confirm-password-box');
-const passwordDoesNotMatch = `<ul id="mismatch"><li>Password does not match.</li></ul>`
+const passwordDoesNotMatch = `<ul id="mismatch"><li>Passwords do not match.</li></ul>`
 const formFields = document.getElementById('input-box');
 
 formFields.addEventListener('focusout', (e) => {
@@ -25,33 +25,43 @@ formFields.addEventListener('focusout', (e) => {
     } else {
         field.classList.remove('required');
         if (field.id === 'password') {
-            passwordBox.removeChild(requirementsList);
+            if (passwordBox.contains(requirementsList)) {
+                passwordBox.removeChild(requirementsList);
+            }
         }
     }
 
     if (field.id === 'password-confirm') {
         if (!(field.value === passwordInput.value)) {
             field.classList.add('required');
-            confirmPasswordInput.setCustomValidity("Passwords do not match");
-            if (!(confirmPasswordBox.contains(passwordMismatchTip)))
-            confirmPasswordBox.insertAdjacentHTML('beforeend', passwordDoesNotMatch);
+            field.setCustomValidity("Passwords do not match.");
+            if (!(confirmPasswordBox.contains(passwordMismatchTip))) {
+                confirmPasswordBox.insertAdjacentHTML('beforeend', passwordDoesNotMatch);
+            } return;
         } else {
-            confirmPasswordBox.removeChild(passwordMismatchTip);
+            if (confirmPasswordBox.contains(passwordMismatchTip)) {
+                confirmPasswordBox.removeChild(passwordMismatchTip);
+            } if (!(field.value.length == 0)) {
             field.classList.remove('required');
             confirmPasswordInput.setCustomValidity("");
+            } return;
         }
     }
 
     if (field.id === 'password') {
         if (!(field.value === confirmPasswordInput.value)) {
             confirmPasswordInput.classList.add('required');
-            confirmPasswordInput.setCustomValidity("Passwords do not match");
-            if (!(confirmPasswordBox.contains(passwordMismatchTip)))
-            confirmPasswordBox.insertAdjacentHTML('beforeend', passwordDoesNotMatch);
+            confirmPasswordInput.setCustomValidity("Passwords do not match.");
+            if (!(confirmPasswordBox.contains(passwordMismatchTip))) {
+                confirmPasswordBox.insertAdjacentHTML('beforeend', passwordDoesNotMatch);
+            } return;
         } else {
-            confirmPasswordBox.removeChild(passwordMismatchTip);
+            if (confirmPasswordBox.contains(passwordMismatchTip)) {
+                confirmPasswordBox.removeChild(passwordMismatchTip);
+            } if (!(field.value.length == 0)) {
             confirmPasswordInput.classList.remove('required');
             confirmPasswordInput.setCustomValidity("");
+            } return;
         }
     }
     return;
