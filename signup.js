@@ -32,22 +32,26 @@ formFields.addEventListener('focusout', (e) => {
     if (field.id === 'password-confirm') {
         if (!(field.value === passwordInput.value)) {
             field.classList.add('required');
+            confirmPasswordInput.setCustomValidity("Passwords do not match");
             if (!(confirmPasswordBox.contains(passwordMismatchTip)))
             confirmPasswordBox.insertAdjacentHTML('beforeend', passwordDoesNotMatch);
         } else {
             confirmPasswordBox.removeChild(passwordMismatchTip);
             field.classList.remove('required');
+            confirmPasswordInput.setCustomValidity("");
         }
     }
 
     if (field.id === 'password') {
         if (!(field.value === confirmPasswordInput.value)) {
             confirmPasswordInput.classList.add('required');
+            confirmPasswordInput.setCustomValidity("Passwords do not match");
             if (!(confirmPasswordBox.contains(passwordMismatchTip)))
             confirmPasswordBox.insertAdjacentHTML('beforeend', passwordDoesNotMatch);
         } else {
             confirmPasswordBox.removeChild(passwordMismatchTip);
             confirmPasswordInput.classList.remove('required');
+            confirmPasswordInput.setCustomValidity("");
         }
     }
     return;
