@@ -68,7 +68,7 @@ h1 {
 input {
     border-radius: 2px;
     /* border-style: solid;  */
-    border: 1px solid #00000030;
+    border: 1px solid #00000017;
     width: clamp(10ch, 65%, 60ch);
     height: 1.5rem;
 }
@@ -76,6 +76,18 @@ input {
 input:focus {
     box-shadow: 3px 3px 6px 0px #00000036;
     outline: 1px solid blue;
+}
+
+input:required:invalid:focus {
+    outline: 1px solid red;
+}
+
+#requirements {
+    color: red;
+}
+
+.invalid {
+    border: 1px solid red;
 }
 
 #button-box {
