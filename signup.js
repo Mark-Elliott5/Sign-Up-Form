@@ -5,7 +5,7 @@ const passwordBox = document.getElementById('password-box');
 const passwordRequirements = `<ul id="requirements"><li>5-16 characters</li><li>1 number</li><li>1 uppercase character</li><li>1 lowercase character</li></ul>`;
 const confirmPasswordInput = document.getElementById('password-confirm');
 const confirmPasswordBox = document.getElementById('confirm-password-box');
-const passwordDoesNotMatch = `<ul id="mismatch"><li>Passwords do not match.</li></ul>`
+const passwordDoesNotMatch = `<ul id="mismatch"><li>Passwords do not match.</li></ul>`;
 const formFields = document.getElementById('input-box');
 
 formFields.addEventListener('focusout', (e) => {
