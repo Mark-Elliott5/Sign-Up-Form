@@ -82,7 +82,11 @@ input:required:invalid:focus {
     outline: 1px solid red;
 }
 
-#requirements {
+.required {
+    border: 1px solid red;
+}
+
+ul {
     color: red;
 }
 
