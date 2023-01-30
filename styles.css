@@ -82,6 +82,10 @@ input:required:invalid:focus {
     outline: 1px solid red;
 }
 
+input:required:valid:focus {
+    outline: 1px solid blue;
+}
+
 .required {
     border: 1px solid red;
 }
