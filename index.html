@@ -21,7 +21,7 @@
             You <em>know</em> you want to.
         </p>
 
-        <form action="" method="post">
+        <form>
             <div id="input-box">
                 <h1 class="input-header">Let's do this!</h1>
 
@@ -47,12 +47,12 @@
 
                     <div id="password-box" class="input-wrapper">
                         <label for="password">Password</label>
-                        <input id="password" name="password" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,16}$" required><span id="password-requirements"></span>
+                        <input id="password" name="password" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,16}$" required>
                     </div>
 
                     <div id="confirm-password-box" class="input-wrapper">
                         <label for="password-confirm">Confirm Password</label>
-                        <input id="password-confirm" type="password" required>
+                        <input id="password-confirm" type="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9]).{5,16}$" required>
                     </div> 
             </div>
 

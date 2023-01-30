@@ -1,7 +1,3 @@
-/* :root {
-
-} */
-
 body {
     display: flex;
     font-family: 'PT Sans', sans-serif;
@@ -75,7 +71,10 @@ input {
 
 input:focus {
     box-shadow: 3px 3px 6px 0px #00000036;
-    outline: 1px solid blue;
+}
+
+input:required:valid {
+    border: 1px solid green;
 }
 
 input:required:invalid:focus {
@@ -83,7 +82,7 @@ input:required:invalid:focus {
 }
 
 input:required:valid:focus {
-    outline: 1px solid blue;
+    outline: 1px solid green;
 }
 
 .required {
@@ -92,16 +91,11 @@ input:required:valid:focus {
 
 ul {
     color: red;
+    font-size: small;
 }
 
 .invalid {
     border: 1px solid red;
-}
-
-#button-box {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: space-between; */
 }
 
 .submit-button {
@@ -114,15 +108,6 @@ ul {
     margin-bottom: 1rem;
     box-shadow: 3px 3px 6px 0px #00000036;
 }
-
-/* #input-box {
-    display: grid;
-    grid-template-areas: 
-    "firstname lastname"
-    "email phonenumber"
-    "password passwordconfirm"
-    ;
-} */
 
 label {
     color: rgb(110, 110, 110);
@@ -159,19 +144,3 @@ label {
 input, label {
     display: block;
 }
-
-/* button,
-label,
-input,
-select,
-progress,
-meter {
-  display: block;
-  font-family: inherit;
-  font-size: 100%;
-  margin: 0;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 5px;
-  height: 30px;
-} */
