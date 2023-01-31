@@ -37,6 +37,10 @@ body {
     gap: 1rem;
 }
 
+#login-box form div input, #login-box form div button {
+    width: 100%;
+}
+
 /* Side bar  */
 
 #sidebar-image {
