@@ -44,7 +44,7 @@ body {
 /* Side bar  */
 
 #sidebar-image {
-    background-image: url('sidebar-image.jpg');
+    background-image: url('images/sidebar-image.jpg');
     background-size: cover;
     display: flex;
     align-items: center;
