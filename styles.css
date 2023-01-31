@@ -39,7 +39,7 @@ body {
 main {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     box-shadow: 0px 0px 20px 5px #00000075;
     flex: 1 1 auto;
 }
