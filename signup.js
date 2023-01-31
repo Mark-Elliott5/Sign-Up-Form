@@ -68,36 +68,19 @@ formFields.addEventListener('focusout', (e) => {
 })
 
 const loginButton = document.getElementById('log-in');
+const loginBox = document.getElementById('login-box');
+const body = document.getElementsByTagName('body');
 
 loginButton.addEventListener('click', () => {
-    let loginBoxHTML = 
-    `<div id="login-box" style="
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    box-shadow: 0 0 10px 2px #0000003b;
-    border-radius: 4px;
-    padding: 1rem 5rem;">
-        <h1>Existing Users</h1>
-        <form style="
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;">
-            <div>
-                <label for="login-email">Email:</label>
-                <input id="login-email">
-            </div>
-            <div>
-                <label for="login-password">Password:</label>
-                <input id="login-password">
-            </div>
-            <div>
-                <button type="submit" id="login-button" class="submit-button">Log in</button>
-            </div>
-        </form>
-    </div>`;
+    if (loginBox.classList.contains('hidden')) {
+        loginBox.classList.remove('hidden');
+    } return;
 })
+
+// body.addEventListener('click', (e) => {
+//     if (!(e.target.dataset.type === 'login-box')) {
+//         loginBox.classList.add('hidden');
+//     } return;
+// })
 
 

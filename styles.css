@@ -7,6 +7,29 @@ body {
     margin: 0;
 }
 
+/* Login box */
+
+.hidden {
+    visibility: hidden;
+}
+
+#login-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0 0 10px 2px #0000003b;
+    border-radius: 4px;
+    padding: 1rem 5rem;
+}
+
+#login-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 /* Side bar  */
 
 #sidebar-image {

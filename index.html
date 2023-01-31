@@ -13,7 +13,22 @@
     <title>Sign Up</title>
 </head>
 <body>
-    
+    <div id="login-box" data-type="login-box" class="hidden">
+        <h1 data-type="login-box">Existing Users</h1>
+        <form id="login-form" data-type="login-box">
+            <div data-type="login-box">
+                <label for="login-email" data-type="login-box">Email:</label>
+                <input id="login-email" data-type="login-box">
+            </div>
+            <div data-type="login-box">
+                <label for="login-password" data-type="login-box">Password:</label>
+                <input id="login-password" data-type="login-box">
+            </div>
+            <div data-type="login-box">
+                <button type="submit" id="login-button" class="submit-button" data-type="login-box">Log in</button>
+            </div>
+        </form>
+    </div>
     <div id="sidebar-image">
         <div class="logo-box">
             <img src="clover-logo.png" class="logo-image"></img>
@@ -69,7 +84,7 @@
 
             <div id="button-box">
                 <button id="register-button" type="submit" class="submit-button">Create Account</button>
-                <p>Already have an account? <a href="" id="log-in">Log in</a></p>
+                <p>Already have an account? <a id="log-in">Log in</a></p>
             </div>    
         </div>
         </form>
