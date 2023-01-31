@@ -12,22 +12,20 @@ body {
 #sidebar-image {
     background-image: url('sidebar-image.jpg');
     background-size: cover;
+    display: flex;
+    align-items: center;
 }
 
 .logo-box {
     background-color: #00000033;
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    margin-top: 50%;
 }
 
 .logo-image {
     width: 50%;
-    height: 50%;
 }
 
 .logo-text {
