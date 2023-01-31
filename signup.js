@@ -68,19 +68,20 @@ formFields.addEventListener('focusout', (e) => {
 })
 
 const loginButton = document.getElementById('log-in');
-const loginBox = document.getElementById('login-box');
-const body = document.getElementsByTagName('body');
+const loginBoxBlocker = document.getElementById('login-box-blocker');
 
 loginButton.addEventListener('click', () => {
-    if (loginBox.classList.contains('hidden')) {
-        loginBox.classList.remove('hidden');
+    if (loginBoxBlocker.classList.contains('hidden')) {
+        loginBoxBlocker.classList.remove('hidden');
     } return;
 })
 
-// body.addEventListener('click', (e) => {
-//     if (!(e.target.dataset.type === 'login-box')) {
-//         loginBox.classList.add('hidden');
-//     } return;
-// })
+loginBoxBlocker.addEventListener('click', (e) => {
+    if (e.target.dataset.type === 'login-box') {
+        return;
+    }
+    loginBoxBlocker.classList.add('hidden');
+    return;
+})
 
 
