@@ -7,6 +7,9 @@ const confirmPasswordInput = document.getElementById('password-confirm');
 const confirmPasswordBox = document.getElementById('confirm-password-box');
 const passwordDoesNotMatch = `<ul id="mismatch"><li>Passwords do not match.</li></ul>`;
 const formFields = document.getElementById('input-box');
+const loginButton = document.getElementById('log-in');
+const loginBoxBlocker = document.getElementById('login-box-blocker');
+const loginBox = document.getElementById('login-box');
 
 formFields.addEventListener('focusout', (e) => {
     let field = e.target;
@@ -64,24 +67,16 @@ formFields.addEventListener('focusout', (e) => {
             } return;
         }
     }
-    return;
 })
 
-const loginButton = document.getElementById('log-in');
-const loginBoxBlocker = document.getElementById('login-box-blocker');
+loginBox.addEventListener('click', (e) => {
+    e.stopPropagation();
+})
 
 loginButton.addEventListener('click', () => {
-    if (loginBoxBlocker.classList.contains('hidden')) {
-        loginBoxBlocker.classList.remove('hidden');
-    } return;
+    loginBoxBlocker.classList.remove('hidden');
 })
 
-loginBoxBlocker.addEventListener('click', (e) => {
-    if (e.target.dataset.type === 'login-box') {
-        return;
-    }
+loginBoxBlocker.addEventListener('click', () => {
     loginBoxBlocker.classList.add('hidden');
-    return;
 })
-
-
